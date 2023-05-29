@@ -1,0 +1,16 @@
+export const defaultTheme = {
+  primary: '#f1a33c',
+  darkGray: '#333333',
+  lightGray: '#c0c0c0',
+  mediumGray: '#777777',
+  gray: '#434242',
+  orange: '#f1a33c',
+  white: '#ffffff',
+  black: '#000000',
+  red500: '#ab222e',
+  red700: '#7a1921',
+  yellow: '#e8c159',
+  green: '#00b37e',
+  green500: '#00875f',
+  green700: '#015f43',
+};

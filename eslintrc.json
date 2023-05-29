@@ -1,0 +1,13 @@
+{
+    "rules": {
+        "react-refresh/only-export-components":"off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "react-hooks/exhaustive-deps":"off"
+      },
+
+    "extends": [
+        "@rocketseat/eslint-config/react",
+        "plugin:react/recommended",
+        "prettier"
+    ]  
+}
