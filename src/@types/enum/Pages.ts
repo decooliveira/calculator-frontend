@@ -7,7 +7,6 @@ export enum Pages {
 }
 
 export const pathToPage = (pathname: string): Pages => {
-  console.log(pathname);
   switch (pathname) {
     case '/calculator':
       return Pages.CALCULATOR;

@@ -48,6 +48,6 @@ The top of the page displays the available credit balance, which is updated afte
 
 ## Running Locally
 
-To run the application locally, execute the command `npm run dev` in the root folder. Please note that the backend site must also be running. Follow the instructions on this page to run the backend: [https://github.com/decooliveira/calculator-backend](https://github.com/decooliveira/calculator-backend)
+To run the application locally, execute the command `npm run dev` in the root folder. Please note that the backend site must also be running. Set the API_BASE_URL variable to your backend url config/apiConfig.ts file. To run the backend application locally, follow the instructions on this page to run the backend: [https://github.com/decooliveira/calculator-backend](https://github.com/decooliveira/calculator-backend)
 
 **Note:** This documentation assumes familiarity with the development environment and necessary dependencies.

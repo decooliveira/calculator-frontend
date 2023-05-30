@@ -28,7 +28,6 @@ export const Pagination = ({
   handleCurrentPage,
   setPage,
 }: Props) => {
-
   const getPageRange = () => {
     const range = [];
     let startPage;
@@ -56,7 +55,7 @@ export const Pagination = ({
 
     return range;
   };
-    
+
   return (
     <PaginationContainer>
       <Summary>
@@ -78,6 +77,7 @@ export const Pagination = ({
             {page}
           </PaginationButton>
         ))}
+
         {data.currentPage < data.totalPages && (
           <PaginationButton onClick={handleNextPage}>
             Next &gt;

@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { Calculator } from './pages/Calculator';
 import { DefaultLayout } from './layouts/DefaultLayout';
 import { History } from './pages/History';
 import { Billing } from './pages/Billing';
@@ -12,10 +11,9 @@ export function Router() {
   return (
     <Routes>
       <Route element={<ProtectedLayout />}>
-        <Route path="/calculator" element={<Calculator />} />
+        <Route path="/calculator" element={<AppCalculator />} />
         <Route path="/history" element={<History />} />
         <Route path="/billing" element={<Billing />} />
-        <Route path="/calc" element={<AppCalculator />} />
       </Route>
 
       <Route path="/" element={<DefaultLayout />}>
