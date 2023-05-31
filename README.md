@@ -34,8 +34,9 @@ Each operation performed incurs a specific credit cost, as outlined in the follo
 | Square Root    | 12          |
 | Random String  | 20          |
 
-When users run out of credits, they can obtain more in the "Get Credits" section.
 ![Calculator](https://github.com/decooliveira/calculator-frontend/blob/master/docs/calculator.png)
+
+When users run out of credits, they can obtain more in the "Get Credits" section.
 
 ## Records
 
@@ -50,8 +51,6 @@ This page also offers filtering options and pagination settings.
 In this section any user can obtain more credits. Simply define an amount of credits and press "Get Credits" button.
 
 ![Get credits](https://github.com/decooliveira/calculator-frontend/blob/master/docs/credits.png)
-
-## Logout
 
 ## Logout
 
