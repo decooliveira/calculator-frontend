@@ -33,6 +33,7 @@ Each operation performed incurs a specific credit cost, as outlined in the follo
 | Random String  | 20          |
 
 When users run out of credits, they can obtain more in the "Get Credits" section.
+![Calculator](https://github.com/decooliveira/calculator-frontend/blob/master/docs/calculator.png)
 
 ## Records
 
