@@ -17,6 +17,8 @@ On this page, users can create a new account. They need to provide a valid email
 
 Upon creating an account, users are allocated 200 credits to perform operations on the Calculator.
 
+![Sign up](https://github.com/decooliveira/calculator-frontend/blob/master/docs/signup.png)
+
 ## Calculator
 
 The Calculator application allows users to perform simple mathematical operations and generate random strings. It functions similar to a standard calculator, with the additional functionality that pressing the "S" key generates a random string of 14 characters and displays it.
@@ -40,6 +42,16 @@ When users run out of credits, they can obtain more in the "Get Credits" section
 The Records section lists all the operations performed by the user, displaying the result, operation type, and date. Users can click on the column titles to sort the records in ascending or descending order.
 
 This page also offers filtering options and pagination settings.
+
+![Records list](https://github.com/decooliveira/calculator-frontend/blob/master/docs/records.png)
+
+## Get Credits
+
+In this section any user can obtain more credits. Simply define an amount of credits and press "Get Credits" button.
+
+![Get credits](https://github.com/decooliveira/calculator-frontend/blob/master/docs/credits.png)
+
+## Logout
 
 ## Logout
 
