@@ -57,13 +57,17 @@ export const RecordsList = ({
                 Type
               </Head>
             </th>
-            <th onClick={() => handleOrderBy('result')}>
-              <DirectionIcon isAscending={isAscending} />
-              Result
+            <th>
+              <Head onClick={() => handleOrderBy('result')}>
+                <DirectionIcon isAscending={isAscending} />
+                Result
+              </Head>
             </th>
-            <th onClick={() => handleOrderBy('date')}>
-              <DirectionIcon isAscending={isAscending} />
-              Date
+            <th>
+              <Head onClick={() => handleOrderBy('date')}>
+                <DirectionIcon isAscending={isAscending} />
+                Date
+              </Head>
             </th>
             <th>Remove</th>
           </tr>

@@ -74,6 +74,7 @@ export const Head = styled.div`
   gap: 0.5rem;
   :hover {
     color: ${(props) => props.theme.yellow};
+    cursor: pointer;
   }
 `;
 
