@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { useState } from 'react';
 import { OperationTypes } from '../../@types/enum/OperationTypes';
 import { MathOperationRequest } from '../../@types/interfaces/MathOperationRequest';
@@ -57,22 +58,29 @@ export const AppCalculator = () => {
     a: number;
     b: number;
     operation: string;
-  }): Promise<number> => {
+  }): Promise<number | string> => {
     const service: OperationsService = new OperationsService(user.token);
-    const { result, balance } = await service.performMathOperations({
+    let { result, balance } = await service.performMathOperations({
       a,
       b,
       operation: operation,
     });
-    handleBalance(balance);
-    return Number(result);
+
+    if (balance) {
+      handleBalance(balance);
+    }
+
+    if (typeof result === 'number' && result > 999999999) {
+      result = result.toExponential();
+    }
+    return result;
   };
 
   const math = async ({
     a,
     b,
     operation: sign,
-  }: MathOperationRequest): Promise<number> => {
+  }: MathOperationRequest): Promise<number | string> => {
     const operation = getOperation(sign);
     return performOperation({ a, b, operation });
   };
@@ -80,7 +88,10 @@ export const AppCalculator = () => {
   const handleNumberKeyClick = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const value = e.target.innerHTML;
-    if (removeSpaces(operationData.val).length < 16) {
+    if (value.length > 15) {
+      return;
+    }
+    if (removeSpaces(operationData.val).length <= 15) {
       setOperationData({
         ...operationData,
         val:
