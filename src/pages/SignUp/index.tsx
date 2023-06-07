@@ -95,6 +95,11 @@ const Signup = () => {
     }
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSignup();
+    }
+  };
   return (
     <Container>
       <SignupForm>
@@ -109,11 +114,13 @@ const Signup = () => {
           placeholder="password"
           value={password}
           onChange={handlePasswordChange}
+          onKeyDown={(e) => handleKeyPress(e)}
         />
         <PasswordInput
           placeholder="confirm password"
           value={confirmPassword}
           onChange={handleConfirmPasswordChange}
+          onKeyDown={(e) => handleKeyPress(e)}
         />
         <SubmitButton onClick={handleSignup}>Sign up</SubmitButton>
       </SignupForm>
