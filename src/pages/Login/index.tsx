@@ -89,6 +89,12 @@ export const Login = () => {
     }
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleLogin();
+    }
+  };
+
   return (
     <Container>
       <SignupForm>
@@ -103,6 +109,7 @@ export const Login = () => {
           placeholder="password"
           value={password}
           onChange={handlePasswordChange}
+          onKeyDown={(e) => handleKeyPress(e)}
         />
         <SubmitButton onClick={handleLogin}>Login</SubmitButton>
         <NavLink href="/signup">Create your account</NavLink>
