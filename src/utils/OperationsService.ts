@@ -44,7 +44,7 @@ class OperationsService {
     } catch (error) {
       if (error instanceof AxiosError && error.response) {
         const { message } = error.response.data;
-        return { result: message, balance: 0 };
+        return { result: message};
       } else {
         return { result: 'Oops, error. Try again!', balance: 0 };
       }

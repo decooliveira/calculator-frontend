@@ -46,7 +46,9 @@ export const AppCalculator = () => {
     const { result, balance } = await service.performStringOperations({
       operation: OperationTypes.RANDOM_STRING,
     });
-    handleBalance(balance);
+    if (balance !== undefined) {
+      handleBalance(balance);
+    }
     return result;
   };
 
@@ -66,12 +68,12 @@ export const AppCalculator = () => {
       operation: operation,
     });
 
-    if (balance) {
+    if (balance !== undefined) {
       handleBalance(balance);
     }
 
     if (typeof result === 'number' && result > 999999999) {
-      result = result.toExponential();
+      result = result.toExponential(1);
     }
     return result;
   };
@@ -91,7 +93,7 @@ export const AppCalculator = () => {
     if (value.length > 15) {
       return;
     }
-    if (removeSpaces(operationData.val).length <= 15) {
+    if (removeSpaces(operationData.val).length < 15) {
       setOperationData({
         ...operationData,
         val:

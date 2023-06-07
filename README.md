@@ -38,6 +38,21 @@ Each operation performed incurs a specific credit cost, as outlined in the follo
 
 When users run out of credits, they can obtain more in the "Get Credits" section.
 
+### Operations with large numbers
+
+The maximum safe integer in JavaScript is Number.MAX_SAFE_INTEGER, which is 9007199254740991. When you enter a number greater than this value, such as "99999999916", it exceeds the maximum safe integer and gets rounded to the nearest representable number.
+
+In this case, "99999999916" gets rounded to 1000000000000000. This happens because the number is too large to be accurately represented with the available precision.
+
+This application is not applying any specialized library to handle arbitrary-precision arithmetic. However, large number results are represented in exponential format as the following example:
+
+The `toExponential()` method in JavaScript can be used to represent a number in exponential notation with a specified number of digits after the decimal point. Here's the result of `999999999999999 * 999999999999999` using `toExponential(1)`:
+
+Result: 1.0e+30
+
+In this notation, the number is represented as 1.0 multiplied by 10 raised to the power of 30. The `toExponential(1)` method formats the number with one digit after the decimal point.
+![Large number format](https://github.com/decooliveira/calculator-frontend/blob/master/docs/large_number.png)
+
 ## Records
 
 The Records section lists all the operations performed by the user, displaying the result, operation type, and date. Users can click on the column titles to sort the records in ascending or descending order.
