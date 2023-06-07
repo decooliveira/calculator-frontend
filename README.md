@@ -51,6 +51,7 @@ The `toExponential()` method in JavaScript can be used to represent a number in 
 Result: 1.0e+30
 
 In this notation, the number is represented as 1.0 multiplied by 10 raised to the power of 30. The `toExponential(1)` method formats the number with one digit after the decimal point.
+
 ![Large number format](https://github.com/decooliveira/calculator-frontend/blob/master/docs/large_number.png)
 
 ## Records
